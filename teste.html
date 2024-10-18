@@ -1,0 +1,72 @@
+  <!DOCTYPE html>
+  <html lang="pt-BR">
+
+  <head>
+    <meta name="referrer" content="no-referrer-when-downgrade">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Mestre das Finanças</title>
+  </head>
+
+  <body>
+    <div id="login-container" style="display: block;">
+      <h2>Login</h2>
+      <form id="login-form">
+        <label for="username">Usuário:</label>
+        <input type="text" id="username" required>
+        <label for="password">Senha:</label>
+        <input type="password" id="password" required>
+        <button type="submit">Entrar</button>
+      </form>
+      <p>Não tem uma conta? <a href="#" id="show-register">Registrar-se</a></p>
+    </div>
+
+    <div id="register-container" style="display: none;">
+      <h2>Registro</h2>
+      <form id="register-form">
+        <label for="new-username">Usuário:</label>
+        <input type="text" id="new-username" required>
+        <label for="new-password">Senha:</label>
+        <input type="password" id="new-password" required>
+        <button type="submit">Registrar</button>
+      </form>
+      <p>Já tem uma conta? <a href="#" id="show-login">Entrar</a></p>
+    </div>
+
+    <div id="game-container" style="display: none;">
+      <h1>🏦 Mestre das Finanças 💰</h1>
+
+      <div class="status-bar">
+        <span class="status-item">Dinheiro: R$ <span id="money">1000</span></span>
+        <span class="status-item">Cofre: R$ <span id="safe">0</span></span>
+        <span class="status-item">Qualidade de Vida: <span id="life-quality">50</span>%</span>
+        <span class="status-item">Dia: <span id="day">1</span></span>
+        <span class="status-item">Tempo Restante: <span id="time">100</span>%</span>
+        <span class="status-item">Funcionários: <span id="employees">0</span></span>
+      </div>
+      <div id="time-bar">
+        <div id="time-fill"></div>
+      </div>
+      <div id="map"></div>
+      <div id="scene" class="scene"></div>
+      <div id="choices" class="choices"></div>
+      <div id="tip" class="tip"></div>
+      <div id="calendar"></div>
+      <div id="safe-controls" style="margin-top: 20px;">
+        <input type="number" id="safe-amount" min="0" step="1" placeholder="Valor">
+        <button id="deposit-button">Depositar no Cofre</button>
+        <button id="withdraw-button">Retirar do Cofre</button>
+      </div>
+    </div>
+
+    <div id="ranking-container" style="display: none;">
+      <h1>Ranking de Jogadores</h1>
+      <ul id="ranking-list"></ul>
+      <button id="restart-game">Reiniciar Jogo</button>
+    </div>
+
+    <script src="./script.js"></script>
+  </body>
+
+  </html>
